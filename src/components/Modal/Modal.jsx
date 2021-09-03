@@ -8,7 +8,7 @@ const Modal = ({ onClose }) => {
      const inputRef = useRef(null)
 
      useEffect(() => {
-         if(name.length < 3) {
+         if(!name.length) {
              setError(true)
          } else {
              setError(false)
@@ -38,7 +38,7 @@ const Modal = ({ onClose }) => {
            <input ref={inputRef} type='text' className='modal__input' value={name} onChange={handleNameChange} placeholder='Enter name' />
            <span className="modal__input-focus"></span>
            </div>
-           {error && <small className='modal__error'>Username must be minimum of 3 characters</small>}
+           {error && <small className='modal__error'>Please enter input</small>}
            <button onClick={handleClose} className="modal__cta">Close</button>
         </div>
        </>,
