@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { DatePicker } from 'antd'
 import 'antd/dist/antd.css';
+import NotesIllustration from '../../assets/illustration.svg'
 import './Products.scss'
 
 const PRODUCTS_DATA = [
@@ -111,9 +112,8 @@ const Products = () => {
                 <button onClick={filterFinished} className={`products__btn ${filterQuery === 'finished' && 'products__btn--active'}`}>Finished</button>
             </div>
            </header>
-           <p>current date : </p>
            <div className="items">
-               {products.map(data => (
+               {products && products.map(data => (
                 <div className="item item--1">
                    <p className='item__name'>Order Stage : <span className='item__value'>{data.orderStage}</span></p>
                    <p className='item__name'>Order Name : <span className='item__value'>{data.orderName}</span></p>
@@ -121,6 +121,12 @@ const Products = () => {
                    <p className='item__name'>Order Date : <span className='item__value'>{data.orderDate}</span></p>
                </div>
                ))}
+               {products.length === 0 && (
+                   <div className='illustration-box'>
+                    <p className='not-found'>Sorry !! No products found</p>
+                   <img className='illustration' src={NotesIllustration} alt='empty notes' />
+                </div>
+               )}
            </div>
         </div>
     )

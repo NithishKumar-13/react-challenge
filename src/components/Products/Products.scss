@@ -22,7 +22,7 @@
     &__heading {
         font-size: 3rem;
         font-weight: 700;
-        
+
         &--primary {
           color: #243E63;
         }
@@ -66,13 +66,23 @@
     .item {
         background: #fff;
         padding: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
         &__value {
             font-weight: 700;
         }
     }
-}
 
-#date {
-    background: #fff !important;
+    .illustration-box {
+        margin: 2rem auto;
+    }
+
+    .not-found {
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+
+    .illustration {
+        height: 25rem;
+    }
 }
