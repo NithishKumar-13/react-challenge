@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { DatePicker } from 'antd'
 import 'antd/dist/antd.css';
 import './Products.scss'
@@ -64,7 +64,6 @@ const PRODUCTS_DATA = [
 const Products = () => {
     const [products,setProducts] = useState(PRODUCTS_DATA)
     const [filterQuery,setFilterQuery] = useState('all')
-    const [date, setDate] = useState(new Date())
 
     const filterNew = () => {
         const filtered = [...PRODUCTS_DATA].filter(product => product.orderStage === 'new')
