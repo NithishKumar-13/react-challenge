@@ -7,8 +7,8 @@ const App = () => {
     const [isOpen,setIsOpen] = useState(false)
 
     return(
-        <div>
-            <button onClick={() => setIsOpen(true)}>Open modal</button>
+        <div className='app'>
+            <button className='open-btn' onClick={() => setIsOpen(true)}>Open modal</button>
             {isOpen && <Modal onClose={setIsOpen} />}
             <Products />
         </div>
