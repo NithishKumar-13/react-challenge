@@ -1,7 +1,7 @@
 .products {
     max-width: 100rem;
     width: 90%;
-    margin: 10rem auto 0;
+    margin: auto;
 
     &__header {
         display: flex;
@@ -21,7 +21,8 @@
 
     &__heading {
         font-size: 3rem;
-
+        font-weight: 700;
+        
         &--primary {
           color: #243E63;
         }
@@ -64,7 +65,7 @@
 
     .item {
         background: #fff;
-        padding: 1rem;
+        padding: 2rem;
 
         &__value {
             font-weight: 700;
