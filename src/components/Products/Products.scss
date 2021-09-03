@@ -1,0 +1,77 @@
+.products {
+    max-width: 100rem;
+    width: 90%;
+    margin: 10rem auto 0;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__btn-box {
+        align-self: stretch;
+        background: #edf2f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 30rem;
+        padding: 0 1rem;
+    }
+
+    &__heading {
+        font-size: 3rem;
+
+        &--primary {
+          color: #243E63;
+        }
+
+        &--secondary {
+            display: inline-block;
+            background: #7529cc;
+            color: #fff;
+            padding: 0 .7rem;
+            transform: skewX(-12deg);
+        }
+    }
+
+    &__btn {
+        all: unset;
+        padding: .4rem 1.8rem;
+        color: #4d5157;
+        cursor: pointer;
+        
+        &--active {
+            background: #7529cc;
+            color: #fff;
+        }
+
+        &:not(&--active):hover {
+            background: #d8d9da;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+    .items {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25ch,1fr));
+        gap: 2rem;
+    }
+
+    .item {
+        background: #fff;
+        padding: 1rem;
+
+        &__value {
+            font-weight: 700;
+        }
+    }
+}
+
+#date {
+    background: #fff !important;
+}
